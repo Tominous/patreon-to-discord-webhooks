@@ -44,7 +44,7 @@ if (!hash_equals($X_Patreon_Signature, $signature)) {
     die("Patreon Signature didn't match, got: " . $X_Patreon_Signature . " expected: " . $signature);
 }
 
-// get all the user info
+// get all the user information
 $pledge_amount = $event_data['data']['attributes']['amount_cents'];
 $patron_id     = $event_data['data']['relationships']['patron']['data']['id'];
 $campaign_id   = $event_data['data']['relationships']['campaign']['data']['id'];
